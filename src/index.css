@@ -1,0 +1,254 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body{
+    background-color: black;
+    padding: 0px 30px;
+  }
+
+  ::-webkit-scrollbar
+  {
+      width: 0px;
+      overflow-x: hidden;
+      height: 0px;
+  }
+
+  ::-webkit-scrollbar-track
+  {
+      background-color: transparent;
+  }
+  
+  ::-webkit-scrollbar-thumb 
+  {
+      background: #00f0ff;
+      border-radius: 999px;
+      /* height: 10px; */
+  }
+    
+  ::-webkit-scrollbar-thumb:hover 
+  {
+      background:  #62d0d7; 
+  }
+  
+  .button-hover {
+    color: #00f0ff;
+  }
+  
+  .home-slider-1 { /* Home-left-content */
+    animation: home-slide 1.6s forwards ease-out;
+  }
+  
+  .home-slider-2 { /* home-left-content */
+    animation: home-slide 2.5s forwards ease-out;
+  }
+  
+  .header-left-animation {  /* Header-logo */
+    animation: header-l-loading 3s forwards ease-out;
+  }
+  
+  .header-right-animation:nth-child(1) { /* Header-Button */
+    animation: header-loading 1s forwards ease-out;
+  }
+  
+  .header-right-animation:nth-child(2) { /* Header-Button */
+    animation: header-loading 1.6s forwards ease-out;
+  }
+  
+  .header-right-animation:nth-child(3) { /* Header-Button */
+    animation: header-loading 2.2s forwards ease-out;
+  }
+  
+  .header-right-animation:nth-child(4) { /* Header-Button */
+    animation: header-loading 2.8s forwards ease-out;
+  }
+  
+  .header-right-animation:nth-child(5) { /* Header-Button */
+    animation: header-loading 3.4s forwards ease-out;
+  }
+  
+  .Loading-animation { /* Loading-pagr-intro*/
+    animation:loading 6s forwards ease-out;
+  }
+  
+  .home-animation-img { /* Home-Profile-Image */
+    animation: scaling 800ms forwards ease-out;
+  }
+  
+  .home-social-animation:nth-child(1) {
+    animation: scaling 600ms forwards linear;
+  }
+  
+  .home-social-animation:nth-child(2) {
+    animation: scaling 1200ms forwards linear;
+  }
+  
+  .home-social-animation:nth-child(3) {
+    animation: scaling 1800ms forwards linear;
+  }
+  
+  .home-social-animation:nth-child(4) {
+    animation: scaling 2400ms forwards linear;
+  }
+  
+  .home-social-animation:nth-child(5) {
+    animation: scaling 3000ms forwards linear;
+  }
+  
+  .home-button-animation{
+    animation: button-loading 1.5s forwards linear;
+  }
+  
+ .about-animation {
+    animation: glow-back 5s forwards linear infinite;
+ }  
+
+ .about-mark-animation:nth-child(1) {
+  animation: grown-1 3s forwards;
+ }
+
+ .about-mark-animation:nth-child(2) {
+  animation: grown-2 3s forwards;
+ }
+
+ .about-mark-animation:nth-child(3) {
+  animation: grown-3 3s forwards;
+ }
+  
+  
+  
+  @keyframes header-loading {
+    from {
+      translate: 0px -100px;
+    }
+    to {
+      translate: 0px 0px;
+    }
+  }
+  
+  @keyframes button-loading {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes loading {
+    80%{
+      opacity: 0.8;
+    }  
+    90% {
+      opacity: 0.9;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes scaling {
+    0% {
+      scale: 0;
+    }
+  
+    80% {
+      scale: 1.1;
+    }
+  
+    100% {
+      scale: 1;
+    }
+  }
+  
+  @keyframes header-l-loading {
+    from{
+      translate: -100px 0px;
+    }
+    to {
+      translate: 0px 0px;
+    }
+  }
+  
+  @keyframes home-slide {
+    from{
+      translate: -700px 0px;
+      opacity: 0.2;
+    }
+    to {
+      translate: 0px 0px;
+      opacity: 1;
+    }
+    
+  }
+
+@keyframes glow-back {
+    /* 0% {
+        scale: 1;
+        filter: drop-shadow(0px -20px 20px #00f0ff50);
+    }
+
+    20% {
+        scale: 1.04;
+    }
+
+    40% {
+        scale: 1;
+    }
+
+    60% {
+        scale: 1.04;
+    }
+
+    80% {
+        scale: 1;
+    }
+
+    100% {
+        scale: 1.04;
+        filter: drop-shadow(0px -20px 100px #00f0ff50);
+    } */
+
+    0%, 40%, 80% {
+        filter: drop-shadow(0px -20px 60px #00f0ff80);
+    }
+    20%, 60%, 100% {
+        filter: drop-shadow(0px -20px 100px #00f0ff80);
+    }
+}
+
+@keyframes grown-1 {
+  0% {
+    width: 0%;
+  }
+  80% {
+    width: 93%;
+  }
+  100% {
+    width: 84.8%;
+  }
+}
+
+@keyframes grown-2 {
+  0% {
+    width: 0%;
+  }
+  80% {
+    width: 93%;
+  }
+  100% {
+    width: 69.5%;
+  }
+}
+
+@keyframes grown-3 {
+  0% {
+    width: 0%;
+  }
+  80% {
+    width: 93%;
+  }
+  100% {
+    width: 84%;
+  }
+}
